@@ -87,7 +87,7 @@ onMounted(() => {
       <!-- {{ todos }} -->
       <h3>TODO LIST</h3>
       <div class="list">
-        <div v-for="todo in todos_asc" :class="`todo-item ${todo.done && 'done'}`">
+        <div v-for="todo in todos_asc" :key="todo.idx" :class="`todo-item ${todo.done && 'done'}`">
           <label>
             <input
               type="checkbox"
